@@ -1,7 +1,9 @@
 const express = require("express");
+var cors = require('cors');
 const app = express();
 const { MongoClient } = require("mongodb");
 
+app.use(cors());
 app.use(express.static("public"));
 
 const url = "mongodb+srv://db:nikita19@allserver.t6epw.mongodb.net/hiring?retryWrites=true&w=majority";
